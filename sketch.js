@@ -35,11 +35,21 @@ function setup()
 
 
 	//call your buildShuffleArray function here. Followed by a call to shuffleDeck with the return value of buildShuffleArray as an argument.
-
+	var a = buildShuffleArray();
+	shuffleDeck(a);
 }
 
 //write your buildShuffleArray function here
+function buildShuffleArray()
+{
+	var a = [];
 
+	for (var i = 0; i < 52; i++) {
+		a.push(round(random(6, 66)));
+	}
+
+	return a;
+}
 
 /////////////////////DON'T CHANGE ANYTHING BELOW HERE/////////////////////////
 function shuffleDeck(shuffleSeed)
